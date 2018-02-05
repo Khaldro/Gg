@@ -1,0 +1,26 @@
+[
+	{
+		"id": 0,
+		"title": "Bronze Sword",
+		"dmg":5,
+		"slug":"bronze_sword",
+		"stackable":true,
+		"rarity":"common"
+	},
+	{
+		"id": 1,
+		"title": "Silver Sword",
+		"dmg":7,
+		"slug": "silver_sword",
+		"stackable":false,
+		"rarity":"uncommon"
+	},
+	{
+		"id": 2,
+		"title": "Golden Sword",
+		"dmg":10,
+		"slug": "golden_sword",
+		"stackable":false,
+		"rarity":"rare"
+	}
+]

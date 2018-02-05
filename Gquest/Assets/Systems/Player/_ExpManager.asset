@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f63a7c092f892d45843a72f28943e74, type: 3}
+  m_Name: _ExpManager
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 49dbcf505ecdfd942ac3ab0ead9dbec4, type: 2}
+  Experience: {fileID: 1015062340926370, guid: a9d454dad10484c4c95d6bbf7ea9912a, type: 2}
+  Level: {fileID: 1804574440181734, guid: cf56d3a0bc1e42747a7802f4c261f441, type: 2}
+  NextLvl: {fileID: 1976342626183722, guid: ae4e7b4550a90c54cad8b4019435220c, type: 2}
+  ExpBar: {fileID: 1696818853623080, guid: 24fc1c57038e43545a5799b36ebe6760, type: 2}

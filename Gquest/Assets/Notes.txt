@@ -1,0 +1,24 @@
+
+///////////////// Things To Do ////////////////////
+
+Refactor Battle scene for Arena
+_Equipment - Delete Singleton & Rework the system
+_Inventory - Delete Singleton, Rework with Scitables
+_Make UI Responsive (!)
+
+Client > Arena
+return to main scene when server connection lost
+
+Arena battle 
+//////////////////// Issues //////////////////////
+
+
+
+///////////// About ScritableObjects ////////////////
+    (!) State saved in editor mode (!)
+
+When building they keep values from last editor session.
+They don't save between build game sessions.
+
+So they Can't be used for saving purposes
+
