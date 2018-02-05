@@ -8,7 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33de8d5eb9ffe594daa584d930c9dfaa, type: 3}
-  m_Name: _TempEnemy
+  m_Script: {fileID: 11500000, guid: b82dd6dca6b4dd6449b315c45a70ee2f, type: 3}
+  m_Name: Buttons
   m_EditorClassIdentifier: 
-  tempEnemy: {fileID: 0}

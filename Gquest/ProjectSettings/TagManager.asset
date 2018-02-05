@@ -7,6 +7,8 @@ TagManager:
   - Main
   - Item
   - ToDisable
+  - Adventure
+  - LoginPanel
   layers:
   - Default
   - TransparentFX

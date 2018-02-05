@@ -1,4 +1,7 @@
-﻿using UnityEngine.SceneManagement;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +12,7 @@ public class VictoryButton : MonoBehaviour {
         gameObject.GetComponent<Button>().onClick.AddListener(TapToContinue);
 	}
 
-    private void TapToContinue()
+    public void TapToContinue()
     {
         SceneManager.LoadScene("Main");
     }

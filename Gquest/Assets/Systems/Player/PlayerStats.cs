@@ -1,6 +1,6 @@
 ﻿
 [UnityEngine.CreateAssetMenu]
-public class PlayerStats : UnityEngine.ScriptableObject {
+public class CharacterStats : UnityEngine.ScriptableObject {
     public TempEnemy tempEnemy;
 
     public string NAME      { get; set ; }
@@ -14,12 +14,12 @@ public class PlayerStats : UnityEngine.ScriptableObject {
     public int CRITCHANCE   { get; set; }
     // ------------------------------------
     public int LVL = 1;
-    public float Exp = 1;
+    public float EXP = 0;
     public int LIFEDRAIN = 0;
 
     public void Attack()
     {
         tempEnemy.enemyToFight.CURRHP -= DMG - tempEnemy.enemyToFight.Defense;
-        
+
     }
 }

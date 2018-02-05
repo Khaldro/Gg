@@ -27,9 +27,9 @@ public class HudCanvas : MonoBehaviour
     }
 
     void Start () {
-        MainMenuButton.GetComponent<Button>().onClick.AddListener(BackToMainMenu);
-        EquipmentButton.GetComponent<Button>().onClick.AddListener(OpenEquipment);
-        InventoryButton.GetComponent<Button>().onClick.AddListener(OpenInventory);
+        //MainMenuButton.GetComponent<Button>().onClick.AddListener(BackToMainMenu);
+        //EquipmentButton.GetComponent<Button>().onClick.AddListener(OpenEquipment);
+        //InventoryButton.GetComponent<Button>().onClick.AddListener(OpenInventory);
     }
 
     private void OpenInventory()

@@ -1,18 +1,27 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
+using UnityEngine.Events;
 
 public class AdventureBtnManager : MonoBehaviour {
-    public Button Btn_Area1, Btn_Area2, Btn_Area3;
-    public GameObject Area_1;
+    public Button Area1, Area2, Area3;
 
-    void Start ()
+	void Start () {
+
+        Area1.onClick.AddListener(LoadArea);
+	}
+
+
+    private void Area1Task()
     {
-        Btn_Area1.GetComponent<Button>().onClick.AddListener(LoadArea);
+        SceneManager.LoadScene("BattleScene1");
     }
-
     void LoadArea()
     {
-        Area_1.SetActive(true);
+        SceneManager.LoadScene("Area1");
     }
    
 }

@@ -25,10 +25,6 @@ public class ArenaManager : MonoBehaviour {
         {
             Debug.Log("not authenticated");
             //Client.Connect();
-            var toDisable = GameObject.Find("Panel").GetComponentsInChildren<Button>();
-
-            for(int i=0;i<toDisable.Length;i++)
-            toDisable[i].interactable = false;
 
             Instantiate(loginSignupPanel, transform);
         }

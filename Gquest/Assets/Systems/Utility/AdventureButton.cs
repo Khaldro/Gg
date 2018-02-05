@@ -9,13 +9,8 @@ public class AdventureButton : MonoBehaviour {
     public GameObject AdventureCanvas;
     // Use this for initialization
     void Start () {
-        Adventure.GetComponent<Button>().onClick.AddListener(AdventureTask);
+        //Adventure.GetComponent<Button>().onClick.AddListener(AdventureTask);
     }
 
-    void AdventureTask()
-    {
-        AdventureCanvas.SetActive(true);
-        //SceneManager.LoadScene("Adventure");
-
-    }
+    
 }
