@@ -10,7 +10,7 @@ public class ButtonsImplementation : ScriptableObject {
     
     private void OnEnable()
     {
-        Adventure = GameObject.FindGameObjectWithTag("Adventure").transform.GetChild(0).gameObject;
+        
     }
 
 
@@ -60,11 +60,11 @@ public class ButtonsImplementation : ScriptableObject {
     #region Private Functions
     private void DisplayMainMenu()
     {
-        
-             //var Adventure = GameObject.FindGameObjectWithTag("Adventure").transform.GetChild(0).gameObject;
-            LoginPanel = GameObject.FindGameObjectWithTag("LoginPanel");
-        
-            if (Adventure.activeSelf)
+
+        //var Adventure = GameObject.FindGameObjectWithTag("Adventure").transform.GetChild(0).gameObject;
+        LoginPanel = GameObject.FindGameObjectWithTag("LoginPanel");
+        Adventure = GameObject.FindGameObjectWithTag("Adventure").transform.GetChild(0).gameObject;
+        if (Adventure.activeSelf)
                 Adventure.SetActive(false);
             if (LoginPanel)
                 Destroy(LoginPanel);
