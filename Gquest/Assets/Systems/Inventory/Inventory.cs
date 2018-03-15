@@ -147,7 +147,7 @@ public class Inventory : MonoBehaviour {
     {
         try
         {
-            for (int i = 0; i < enemyToFight.DropId.Count; i++)
+            for (int i = 0; i < enemyToFight.DropIdCount(); i++)
             {
                 int common = UnityEngine.Random.Range(0, 2);
                 int uncommon = UnityEngine.Random.Range(0, 4);
@@ -155,49 +155,49 @@ public class Inventory : MonoBehaviour {
                 int legend = UnityEngine.Random.Range(0, 6);
                 int epic = UnityEngine.Random.Range(0, 7);
 
-                if (ItemDatabase.FetchItemByID(enemyToFight.DropId[i]).RARITY == "common")
+                if (ItemDatabase.FetchItemByID(enemyToFight.DropId(i)).RARITY == "common")
                 {
 
                     if (common == 1)
                     {
                         Inventory.instance.DroppedItems.Add(ItemDatabase.FetchItemByID
-                            (enemyToFight.DropId[i]));
+                            (enemyToFight.DropId(i)));
                     }
                 }
-                if (ItemDatabase.FetchItemByID(enemyToFight.DropId[i]).RARITY == "uncommon")
+                if (ItemDatabase.FetchItemByID(enemyToFight.DropId(i)).RARITY == "uncommon")
                 {
                     
                     if (uncommon == 1)
                     {
                         Inventory.instance.DroppedItems.Add(ItemDatabase.FetchItemByID
-                            (enemyToFight.DropId[i]));
+                            (enemyToFight.DropId(i)));
                     }
                 }
-                if (ItemDatabase.FetchItemByID(enemyToFight.DropId[i]).RARITY == "rare")
+                if (ItemDatabase.FetchItemByID(enemyToFight.DropId(i)).RARITY == "rare")
                 {
                    
                     if (rare == 1)
                     {
                         Inventory.instance.DroppedItems.Add(ItemDatabase.FetchItemByID
-                            (enemyToFight.DropId[i]));
+                            (enemyToFight.DropId(i)));
                     }
                 }
-                if (ItemDatabase.FetchItemByID(enemyToFight.DropId[i]).RARITY == "legend")
+                if (ItemDatabase.FetchItemByID(enemyToFight.DropId(i)).RARITY == "legend")
                 {
                     
                     if (legend == 1)
                     {
                         Inventory.instance.DroppedItems.Add(ItemDatabase.FetchItemByID
-                            (enemyToFight.DropId[i]));
+                            (enemyToFight.DropId(i)));
                     }
                 }
-                if (ItemDatabase.FetchItemByID(enemyToFight.DropId[i]).RARITY == "epic")
+                if (ItemDatabase.FetchItemByID(enemyToFight.DropId(i)).RARITY == "epic")
                 {
                     
                     if (epic == 1)
                     {
                         Inventory.instance.DroppedItems.Add(ItemDatabase.FetchItemByID
-                            (enemyToFight.DropId[i]));
+                            (enemyToFight.DropId(i)));
                     }
                 }
             }

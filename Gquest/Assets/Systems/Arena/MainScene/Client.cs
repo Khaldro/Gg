@@ -43,21 +43,17 @@ public class Client : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log(this.gameObject.GetInstanceID().ToString());
-        Connect();
-
-
-        __TEST_Delegates.MyEvent += EventSubTest;
+        //__TEST_Delegates.MyEvent += EventSubTest;
 
 
         thisPlayer = Resources.Load<PStats>("pStats");
         playerToFight = Resources.Load<PlayerToFight>("_PlayerToFight");
     }
 
-    void EventSubTest()
-    {
-        Debug.Log("RAISED!!");
-    }
+    //void EventSubTest()
+    //{
+    //    Debug.Log("RAISED!");
+    //}
 
 
 
@@ -79,7 +75,6 @@ public class Client : MonoBehaviour
         HostTopology topology = new HostTopology(config, MAX_CONNECTIONS);
 
         // Host (socket)
-
         hostId = NetworkTransport.AddHost(topology, 0);
         myConnectionId = NetworkTransport.Connect(hostId, "192.168.0.10", 8080, 0, out error);
         Debug.Log("connection error code: " + error);

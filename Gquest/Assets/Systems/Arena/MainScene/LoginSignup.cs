@@ -27,10 +27,13 @@ public class LoginSignup : MonoBehaviour {
             serverStatus.text = "(Local) Server Online";
             login.onClick.AddListener(Login);
         }
-        else 
+        else if(!Client.isConnected)
         {
-            serverStatus.text = "(Local) Server Offline";
+            Client.Connect();
+            serverStatus.text = "(Local) Server Online";
+            login.onClick.AddListener(Login);
         }
+
 	}
 
     private void Login()

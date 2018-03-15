@@ -19,12 +19,10 @@ public class LoadBattle : MonoBehaviour {
     void Mob1()
     {
         LoadEnemyToFight("_Enemy1");
-        SceneManager.LoadScene("BattleScene1");
     }
     void Mob2()
     {
         LoadEnemyToFight("_Enemy2");
-        SceneManager.LoadScene("BattleScene1");
     }
 
 
@@ -35,8 +33,12 @@ public class LoadBattle : MonoBehaviour {
             if (tempEnemy.enemyToFight != null)
                 tempEnemy.enemyToFight = null;
 
-                tempEnemy.enemyToFight = Resources.Load<EnemyToFight>(name);
+            var enemy = Resources.Load<EnemyToFight>(name);
+            tempEnemy.enemyToFight = enemy;
+            tempEnemy.enemyToFight.Name = enemy.Name;
             tempEnemy.enemyToFight.IsArenaPlayer = false;
+
+            SceneManager.LoadScene("BattleScene1");
         }
         catch (System.Exception e)
         {

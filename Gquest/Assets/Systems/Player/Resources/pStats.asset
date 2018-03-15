@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: pStats
   m_EditorClassIdentifier: 
   tempEnemy: {fileID: 11400000, guid: 8659b9eaf0b51f1468c502032259df75, type: 2}
-  MAXHP: 20
-  CURRHP: 20
-  DMG: 110
+  MAXHP: 100
+  CURRHP: 70
+  DMG: 33
   DEF: 10
-  LVL: 3
-  Exp: 780
+  LVL: 5
+  Exp: 1074
   LIFEDRAIN: 0

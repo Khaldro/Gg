@@ -9,7 +9,7 @@ public class BattleState : MonoBehaviour {
     public ExpManager expManager;
     public TempEnemy tempEnemy;
     private EnemyToFight enemyToFight;
-    
+    private float battleSpeed = 0.4f;
 
     void Start()
     {
@@ -43,7 +43,7 @@ public class BattleState : MonoBehaviour {
         ///Player Turn
         if (enemyToFight.CURRHP > 0 && player.CURRHP > 0)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(battleSpeed);
             player.Attack();
             EnemyHpUpdate();
 
@@ -55,8 +55,9 @@ public class BattleState : MonoBehaviour {
             ///Enemy Turn
             else if (!IsPlayerDead() && !IsEnemyDead()) // Enemy attacks
             {
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(battleSpeed);
                 player.CURRHP -= enemyToFight.Damage;
+                Debug.Log(enemyToFight.Damage);
                 PlayerHpUpdate();
                 ////////////////////////////////////////////////////////////
 

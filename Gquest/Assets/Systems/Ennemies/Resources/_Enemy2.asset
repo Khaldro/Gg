@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309e3cd637139204d902e8873aef172f, type: 3}
   m_Name: _Enemy2
   m_EditorClassIdentifier: 
-  MaxHp: 100
-  Damage: 10
-  Defense: 5
-  Name: Enemy2
-  DropId: 0a000000
-  ExpAmount: 80
+  name1: Rookie's Brother
+  lvl: 2
+  damage: 12
+  defense: 5
+  expAmount: 158
+  dropId: 010000000200000003000000
