@@ -14,7 +14,7 @@ public class ArenaManager : MonoBehaviour {
     void Start()
     {
         loginSignupPanel = Resources.Load<GameObject>("LoginSignupPanel");
-        arenaButton = Instantiate(Resources.Load<Button>("ArenaButton").GetComponent<Button>(),GameObject.Find("Panel").transform);
+        arenaButton = Instantiate(Resources.Load<Button>("ArenaButton").GetComponent<Button>(),GameObject.Find("MiddleButtons").transform);
 
         arenaButton.onClick.AddListener(Arena);
     }
