@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStatsCalculator {
+public class StatsCalculator {
 
     public int DamageCalculation(int m_lvl)
     {

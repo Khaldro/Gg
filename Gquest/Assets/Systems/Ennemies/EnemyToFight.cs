@@ -5,10 +5,10 @@ using UnityEngine;
 [CreateAssetMenu]
 public class EnemyToFight : ScriptableObject
 {
-    EnemyStatsCalculator enemyStatsCalculator;
+    StatsCalculator enemyStatsCalculator;
     private void OnEnable()
     {
-        enemyStatsCalculator = new EnemyStatsCalculator();
+        enemyStatsCalculator = new StatsCalculator();
         CalculateStats(Lvl);
     }
 
