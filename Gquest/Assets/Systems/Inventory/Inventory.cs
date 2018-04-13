@@ -119,6 +119,7 @@ public class Inventory : MonoBehaviour {
             items.Add(new Item());
             slots.Add(Instantiate(inventorySlot));
             slots[i].transform.SetParent(slotPanel.transform);
+            slots[i].transform.localScale = new Vector3(1,1,1);
         }
     }
 

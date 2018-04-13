@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StatsCalculator {
 
-    public int DamageCalculation(int m_lvl)
+    public static int DamageCalculation(int m_lvl)
     {
         int baseDamage = 10;
         float exponent = 1.1f;
@@ -15,7 +15,7 @@ public class StatsCalculator {
 
     }
 
-    public int DefenseCalculation(int m_lvl)
+    public static int DefenseCalculation(int m_lvl)
     {
         int baseDefense = 5;
         float exponent = 1.1f;
@@ -25,7 +25,17 @@ public class StatsCalculator {
         return m_lvl == 1 ? baseDefense : CalculatedDefense;
     }
 
-    public int ExpCalculation(int m_lvl)
+    public static int HealthCalculation(int m_lvl)
+    {
+        int baseHealth = 100;
+        float exponent = 1.1f;
+
+        int CalculatedHealth = (int)Mathf.Pow(baseHealth * (m_lvl * 0.5f), exponent);
+
+        return m_lvl == 1 ? baseHealth : CalculatedHealth;
+    }
+
+    public static int ExpCalculation(int m_lvl)
     {
         int baseExp = 100;
         float exponent = 1.1f;

@@ -44,7 +44,7 @@ public class ExpManager : ScriptableObject {
         {
             GameObject.Find("Level").GetComponent<Text>().text = "Level " + playerStats.LVL;
             GameObject.Find("Experience").GetComponent<Text>().text = ((playerStats.Exp / ExpForNextLvl() * 100)).ToString() + "%";
-            GameObject.Find("NextLvl").GetComponent<Text>().text = "NextLvl " + ExpForNextLvl();
+            //GameObject.Find("NextLvl").GetComponent<Text>().text = "NextLvl " + ExpForNextLvl();
             GameObject.Find("ExpBar").GetComponent<Image>().fillAmount = playerStats.Exp / ExpForNextLvl();
         }
         //catch(System.Exception e)

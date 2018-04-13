@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempEnemy: {fileID: 11400000, guid: 8659b9eaf0b51f1468c502032259df75, type: 2}
   MAXHP: 100
-  CURRHP: 70
-  DMG: 33
+  CURRHP: 40
+  DMG: 20
   DEF: 10
   LVL: 5
-  Exp: 1074
+  Exp: 1774
   LIFEDRAIN: 0
