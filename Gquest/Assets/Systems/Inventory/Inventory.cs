@@ -26,16 +26,16 @@ public class Inventory : MonoBehaviour {
     public static Inventory instance;
     
 
-    void Awake()
-    {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            instance = this;
-        }
-        else if (instance != null)
-            Destroy(gameObject);
-    }
+    //void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        DontDestroyOnLoad(gameObject);
+    //        instance = this;
+    //    }
+    //    else if (instance != null)
+    //        Destroy(gameObject);
+    //}
 
     void Start () {
         if (DroppedItems != null)
