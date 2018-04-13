@@ -8,16 +8,16 @@ using UnityEngine.EventSystems;
 public class Inventory : MonoBehaviour {
 
     ItemDatabase itemDatabaseInstance;
-    GameObject inventoryPanel;
-    GameObject slotPanel;
+    
+    
     EnemyToFight enemyToFight;
 
-    public GameObject inventorySlot;
+    
     public GameObject inventoryItem;
 
     public List<Item> items = new List<Item>();
     public List<Item> DroppedItems = new List<Item>();
-    public List<GameObject> slots = new List<GameObject>();
+    
 
     public Button delete;
     public Item item;
@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour {
         UnityEngine.SceneManagement.SceneManager.activeSceneChanged += OnVictorySceneLoad;
         enemyToFight = Resources.Load<TempEnemy>("_TempEnemy").enemyToFight;
         ItemDatabase.Initialize();
-        InitInventorySlots();
+        
         //AddItem(1);
     }
 
@@ -78,7 +78,7 @@ public class Inventory : MonoBehaviour {
             {
                 if (items[i].ID == id)
                 {
-                    ItemData data = slots[i].transform.GetChild(0).GetComponent<ItemData>();
+                    ItemData data = SlotsInit.slots[i].transform.GetChild(0).GetComponent<ItemData>();
                     data.transform.GetChild(0).GetComponent<Text>().enabled = true;
                     data.amount++;
                     data.transform.GetChild(0).GetComponent<Text>().text = data.amount.ToString();
@@ -95,7 +95,7 @@ public class Inventory : MonoBehaviour {
                     items[i] = itemToAdd;
                     GameObject itemObj = Instantiate(inventoryItem);
                     itemObj.GetComponent<ItemData>().item = itemToAdd;
-                    itemObj.transform.SetParent(slots[i].transform);
+                    itemObj.transform.SetParent(SlotsInit.slots[i].transform);
                     itemObj.GetComponent<Image>().sprite = itemToAdd.SPRITE;
                     itemObj.transform.position = Vector2.zero;
                     itemObj.GetComponent<RectTransform>().offsetMin = Vector2.zero;
@@ -108,20 +108,7 @@ public class Inventory : MonoBehaviour {
     }
 
 
-    public void InitInventorySlots()
-    {
-        int slotAmount = 20;
-        inventoryPanel = GameObject.Find("InventoryPanel");
-        slotPanel = inventoryPanel.transform.Find("SlotPanel").gameObject;
-
-        for (int i = 0; i < slotAmount; i++)
-        {
-            items.Add(new Item());
-            slots.Add(Instantiate(inventorySlot));
-            slots[i].transform.SetParent(slotPanel.transform);
-            slots[i].transform.localScale = new Vector3(1,1,1);
-        }
-    }
+    
 
     private void Update()
     {
