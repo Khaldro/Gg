@@ -17,13 +17,13 @@ public class HudCanvas : MonoBehaviour
     public static HudCanvas instance;
     void Awake()
     {
-        //if (instance == null)
-        //{
-        //    DontDestroyOnLoad(gameObject);
-        //    instance = this;
-        //}
-        //else if (instance != null)
-        //    Destroy(gameObject);
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else if (instance != null)
+            Destroy(gameObject);
     }
 
     void Start () {
