@@ -9,9 +9,6 @@ TagManager:
   - ToDisable
   - Adventure
   - LoginPanel
-  - Area
-  - Inventory
-  - Equipment
   layers:
   - Default
   - TransparentFX

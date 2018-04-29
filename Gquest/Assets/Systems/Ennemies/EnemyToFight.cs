@@ -8,14 +8,14 @@ public class EnemyToFight : ScriptableObject
     StatsCalculator enemyStatsCalculator;
     private void OnEnable()
     {
+        enemyStatsCalculator = new StatsCalculator();
         CalculateStats(Lvl);
     }
 
     private bool isArenaPlayer;
-    private float currHp = 0;
-
-    [SerializeField]
     private float maxHp = 100;
+    private float cURRHP = 0;
+
     [SerializeField]
     private string name1 = string.Empty;
     [SerializeField]
@@ -33,7 +33,7 @@ public class EnemyToFight : ScriptableObject
     public bool IsArenaPlayer { get { return isArenaPlayer; }  set { isArenaPlayer = value; } }
     public int ExpAmount { get { return expAmount; }  set { expAmount = value; } }
     public int Defense { get { return defense; }  set { defense = value; } }
-    public float CURRHP { get { return currHp; }  set { currHp = value; } }
+    public float CURRHP { get { return cURRHP; }  set { cURRHP = value; } }
     public int Damage { get { return damage; }  set { damage = value; } }
     public float MaxHp { get { return maxHp; }  set { maxHp = value; } }
     public string Name { get { return name1; }  set { name1 = value; } }
@@ -42,10 +42,9 @@ public class EnemyToFight : ScriptableObject
     
     private void CalculateStats(int m_lvl)
     {
-        Damage = StatsCalculator.DamageCalculation(m_lvl);
-        Defense = StatsCalculator.DefenseCalculation(m_lvl);
-        MaxHp = StatsCalculator.HealthCalculation(m_lvl);
-        ExpAmount = StatsCalculator.ExpCalculation(m_lvl);
+        Damage = enemyStatsCalculator.DamageCalculation(m_lvl);
+        Defense = enemyStatsCalculator.DefenseCalculation(m_lvl);
+        ExpAmount = enemyStatsCalculator.ExpCalculation(m_lvl);
     }
 
     public int DropId(int i)
